@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Resources : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int _destroyedDust;
+    public int _destroyedFurniture;
+    public void DestroyedDust()
     {
-        
+        _destroyedDust++;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void DestroyedFurniture()
     {
-        
+        _destroyedFurniture++;
     }
 }

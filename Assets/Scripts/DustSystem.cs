@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class DustSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Resources _resources;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.name == "Dust")
+        {
+            Destroy(other.gameObject);
+            _resources.DestroyedDust();
+        }
     }
 }
